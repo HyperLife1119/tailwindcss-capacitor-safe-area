@@ -1,6 +1,6 @@
-# tailwindcss-safe-area
+# tailwindcss-capacitor-safe-area
 
-Tailwind CSS utilities for safe areas.
+Tailwind CSS utilities for Capacitor safe areas.
 
 ## Features
 
@@ -11,7 +11,7 @@ Tailwind CSS utilities for safe areas.
 ## Getting started
 
 ```sh
-npm install tailwindcss-safe-area
+npm install tailwindcss-capacitor-safe-area
 ```
 
 Then add the plugin to your `tailwind.config.js` file:
@@ -20,7 +20,7 @@ Then add the plugin to your `tailwind.config.js` file:
 // tailwind.config.js
 module.exports = {
 	theme: {},
-	plugins: [require("tailwindcss-safe-area")],
+	plugins: [require("tailwindcss-capacitor-safe-area")],
 };
 ```
 
@@ -71,36 +71,36 @@ This adds bottom padding equal to the larger of the safe area or `8`.
 
 ```css
 .m-safe {
-	margin-top: env(safe-area-inset-top);
-	margin-right: env(safe-area-inset-right);
-	margin-bottom: env(safe-area-inset-bottom);
-	margin-left: env(safe-area-inset-left);
+	margin-top: var(--safe-area-inset-top, env(safe-area-inset-top));
+	margin-right: var(--safe-area-inset-right, env(safe-area-inset-right));
+	margin-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
+	margin-left: var(--safe-area-inset-left, env(safe-area-inset-left));
 }
 .mx-safe {
-	margin-right: env(safe-area-inset-right);
-	margin-left: env(safe-area-inset-left);
+	margin-right: var(--safe-area-inset-right, env(safe-area-inset-right));
+	margin-left: var(--safe-area-inset-left, env(safe-area-inset-left));
 }
 .my-safe {
-	margin-top: env(safe-area-inset-top);
-	margin-bottom: env(safe-area-inset-bottom);
+	margin-top: var(--safe-area-inset-top, env(safe-area-inset-top));
+	margin-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
 }
 .ms-safe {
-	margin-inline-start: env(safe-area-inset-left);
+	margin-inline-start: var(--safe-area-inset-left, env(safe-area-inset-left));
 }
 .me-safe {
-	margin-inline-end: env(safe-area-inset-left);
+	margin-inline-end: var(--safe-area-inset-left, env(safe-area-inset-left));
 }
 .mt-safe {
-	margin-top: env(safe-area-inset-top);
+	margin-top: var(--safe-area-inset-top, env(safe-area-inset-top));
 }
 .mr-safe {
-	margin-right: env(safe-area-inset-right);
+	margin-right: var(--safe-area-inset-right, env(safe-area-inset-right));
 }
 .mb-safe {
-	margin-bottom: env(safe-area-inset-bottom);
+	margin-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
 }
 .ml-safe {
-	margin-left: env(safe-area-inset-left);
+	margin-left: var(--safe-area-inset-left, env(safe-area-inset-left));
 }
 ```
 
@@ -112,36 +112,36 @@ Same as [margin](#margin), prefixed with `scroll-`.
 
 ```css
 .p-safe {
-	padding-top: env(safe-area-inset-top);
-	padding-right: env(safe-area-inset-right);
-	padding-bottom: env(safe-area-inset-bottom);
-	padding-left: env(safe-area-inset-left);
+	padding-top: var(--safe-area-inset-top, env(safe-area-inset-top));
+	padding-right: var(--safe-area-inset-right, env(safe-area-inset-right));
+	padding-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
+	padding-left: var(--safe-area-inset-left, env(safe-area-inset-left));
 }
 .px-safe {
-	padding-right: env(safe-area-inset-right);
-	padding-left: env(safe-area-inset-left);
+	padding-right: var(--safe-area-inset-right, env(safe-area-inset-right));
+	padding-left: var(--safe-area-inset-left, env(safe-area-inset-left));
 }
 .py-safe {
-	padding-top: env(safe-area-inset-top);
-	padding-bottom: env(safe-area-inset-bottom);
+	padding-top: var(--safe-area-inset-top, env(safe-area-inset-top));
+	padding-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
 }
 .ps-safe {
-	padding-inline-start: env(safe-area-inset-left);
+	padding-inline-start: var(--safe-area-inset-left, env(safe-area-inset-left));
 }
 .pe-safe {
-	padding-inline-end: env(safe-area-inset-left);
+	padding-inline-end: var(--safe-area-inset-left, env(safe-area-inset-left));
 }
 .pt-safe {
-	padding-top: env(safe-area-inset-top);
+	padding-top: var(--safe-area-inset-top, env(safe-area-inset-top));
 }
 .pr-safe {
-	padding-right: env(safe-area-inset-right);
+	padding-right: var(--safe-area-inset-right, env(safe-area-inset-right));
 }
 .pb-safe {
-	padding-bottom: env(safe-area-inset-bottom);
+	padding-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
 }
 .pl-safe {
-	padding-left: env(safe-area-inset-left);
+	padding-left: var(--safe-area-inset-left, env(safe-area-inset-left));
 }
 ```
 
@@ -156,19 +156,19 @@ Screen height, using `-webkit-fill-available` on Safari:
 ```css
 .min-h-screen-safe {
 	min-height: calc(
-		100vh - (env(safe-area-inset-top) + env(safe-area-inset-bottom))
+		100vh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
 	);
 	min-height: -webkit-fill-available;
 }
 .max-h-screen-safe {
 	max-height: calc(
-		100vh - (env(safe-area-inset-top) + env(safe-area-inset-bottom))
+		100vh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
 	);
 	max-height: -webkit-fill-available;
 }
 .h-screen-safe {
 	height: calc(
-		100vh - (env(safe-area-inset-top) + env(safe-area-inset-bottom))
+		100vh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
 	);
 	height: -webkit-fill-available;
 }
@@ -191,17 +191,17 @@ Screen height, using `-webkit-fill-available` on Safari:
 
 .min-h-vh-safe {
 	min-height: calc(
-		100vh - (env(safe-area-inset-top) + env(safe-area-inset-bottom))
+		100vh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
 	);
 }
 .max-h-vh-safe {
 	max-height: calc(
-		100vh - (env(safe-area-inset-top) + env(safe-area-inset-bottom))
+		100vh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
 	);
 }
 .h-vh-safe {
 	height: calc(
-		100vh - (env(safe-area-inset-top) + env(safe-area-inset-bottom))
+		100vh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
 	);
 }
 
@@ -209,17 +209,17 @@ Screen height, using `-webkit-fill-available` on Safari:
 
 .min-h-dvh-safe {
 	min-height: calc(
-		100dvh - (env(safe-area-inset-top) + env(safe-area-inset-bottom))
+		100dvh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
 	);
 }
 .max-h-dvh-safe {
 	max-height: calc(
-		100dvh - (env(safe-area-inset-top) + env(safe-area-inset-bottom))
+		100dvh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
 	);
 }
 .h-dvh-safe {
 	height: calc(
-		100dvh - (env(safe-area-inset-top) + env(safe-area-inset-bottom))
+		100dvh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
 	);
 }
 
@@ -227,17 +227,17 @@ Screen height, using `-webkit-fill-available` on Safari:
 
 .min-h-svh-safe {
 	min-height: calc(
-		100svh - (env(safe-area-inset-top) + env(safe-area-inset-bottom))
+		100svh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
 	);
 }
 .max-h-svh-safe {
 	max-height: calc(
-		100svh - (env(safe-area-inset-top) + env(safe-area-inset-bottom))
+		100svh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
 	);
 }
 .h-svh-safe {
 	height: calc(
-		100svh - (env(safe-area-inset-top) + env(safe-area-inset-bottom))
+		100svh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
 	);
 }
 
@@ -245,17 +245,17 @@ Screen height, using `-webkit-fill-available` on Safari:
 
 .min-h-lvh-safe {
 	min-height: calc(
-		100lvh - (env(safe-area-inset-top) + env(safe-area-inset-bottom))
+		100lvh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
 	);
 }
 .max-h-lvh-safe {
 	max-height: calc(
-		100lvh - (env(safe-area-inset-top) + env(safe-area-inset-bottom))
+		100lvh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
 	);
 }
 .h-lvh-safe {
 	height: calc(
-		100lvh - (env(safe-area-inset-top) + env(safe-area-inset-bottom))
+		100lvh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
 	);
 }
 ```
@@ -264,36 +264,36 @@ Screen height, using `-webkit-fill-available` on Safari:
 
 ```css
 .inset-safe: {
-	top: env(safe-area-inset-top);
-	right: env(safe-area-inset-right);
-	bottom: env(safe-area-inset-bottom);
-	left: env(safe-area-inset-left);
+	top: var(--safe-area-inset-top, env(safe-area-inset-top));
+	right: var(--safe-area-inset-right, env(safe-area-inset-right));
+	bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
+	left: var(--safe-area-inset-left, env(safe-area-inset-left));
 }
 .inset-x-safe: {
-	right: env(safe-area-inset-right);
-	left: env(safe-area-inset-left);
+	right: var(--safe-area-inset-right, env(safe-area-inset-right));
+	left: var(--safe-area-inset-left, env(safe-area-inset-left));
 }
 .inset-y-safe: {
-	top: env(safe-area-inset-top);
-	bottom: env(safe-area-inset-bottom);
+	top: var(--safe-area-inset-top, env(safe-area-inset-top));
+	bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
 }
 .start-safe: {
-	inset-inline-start: env(safe-area-inset-left);
+	inset-inline-start: var(--safe-area-inset-left, env(safe-area-inset-left));
 }
 .end-safe: {
-	inset-inline-end: env(safe-area-inset-left);
+	inset-inline-end: var(--safe-area-inset-left, env(safe-area-inset-left));
 }
 .top-safe: {
-	top: env(safe-area-inset-top);
+	top: var(--safe-area-inset-top, env(safe-area-inset-top));
 }
 .right-safe: {
-	right: env(safe-area-inset-right);
+	right: var(--safe-area-inset-right, env(safe-area-inset-right));
 }
 .bottom-safe: {
-	bottom: env(safe-area-inset-bottom);
+	bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
 }
 .left-safe: {
-	left: env(safe-area-inset-left);
+	left: var(--safe-area-inset-left, env(safe-area-inset-left));
 }
 ```
 
@@ -305,10 +305,10 @@ For example, using Tailwind's default spacing scale:
 
 ```css
 .mr-safe-offset-8 {
-	margin-right: calc(env(safe-area-inset-right) + 2rem);
+	margin-right: calc(var(--safe-area-inset-right, env(safe-area-inset-right)) + 2rem);
 }
 .pb-safe-or-20 {
-	padding-bottom: max(env(safe-area-inset-right), 5rem);
+	padding-bottom: max(var(--safe-area-inset-right, env(safe-area-inset-right)), 5rem);
 }
 ```
 
