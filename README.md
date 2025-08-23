@@ -71,36 +71,36 @@ This adds bottom padding equal to the larger of the safe area or `8`.
 
 ```css
 .m-safe {
-	margin-top: var(--safe-area-inset-top, env(safe-area-inset-top));
-	margin-right: var(--safe-area-inset-right, env(safe-area-inset-right));
-	margin-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
-	margin-left: var(--safe-area-inset-left, env(safe-area-inset-left));
+	margin-top: var(--ion-safe-area-top);
+	margin-right: var(--ion-safe-area-right);
+	margin-bottom: var(--ion-safe-area-bottom);
+	margin-left: var(--ion-safe-area-left);
 }
 .mx-safe {
-	margin-right: var(--safe-area-inset-right, env(safe-area-inset-right));
-	margin-left: var(--safe-area-inset-left, env(safe-area-inset-left));
+	margin-right: var(--ion-safe-area-right);
+	margin-left: var(--ion-safe-area-left);
 }
 .my-safe {
-	margin-top: var(--safe-area-inset-top, env(safe-area-inset-top));
-	margin-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
+	margin-top: var(--ion-safe-area-top);
+	margin-bottom: var(--ion-safe-area-bottom);
 }
 .ms-safe {
-	margin-inline-start: var(--safe-area-inset-left, env(safe-area-inset-left));
+	margin-inline-start: var(--ion-safe-area-left);
 }
 .me-safe {
-	margin-inline-end: var(--safe-area-inset-left, env(safe-area-inset-left));
+	margin-inline-end: var(--ion-safe-area-left);
 }
 .mt-safe {
-	margin-top: var(--safe-area-inset-top, env(safe-area-inset-top));
+	margin-top: var(--ion-safe-area-top);
 }
 .mr-safe {
-	margin-right: var(--safe-area-inset-right, env(safe-area-inset-right));
+	margin-right: var(--ion-safe-area-right);
 }
 .mb-safe {
-	margin-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
+	margin-bottom: var(--ion-safe-area-bottom);
 }
 .ml-safe {
-	margin-left: var(--safe-area-inset-left, env(safe-area-inset-left));
+	margin-left: var(--ion-safe-area-left);
 }
 ```
 
@@ -112,36 +112,36 @@ Same as [margin](#margin), prefixed with `scroll-`.
 
 ```css
 .p-safe {
-	padding-top: var(--safe-area-inset-top, env(safe-area-inset-top));
-	padding-right: var(--safe-area-inset-right, env(safe-area-inset-right));
-	padding-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
-	padding-left: var(--safe-area-inset-left, env(safe-area-inset-left));
+	padding-top: var(--ion-safe-area-top);
+	padding-right: var(--ion-safe-area-right);
+	padding-bottom: var(--ion-safe-area-bottom);
+	padding-left: var(--ion-safe-area-left);
 }
 .px-safe {
-	padding-right: var(--safe-area-inset-right, env(safe-area-inset-right));
-	padding-left: var(--safe-area-inset-left, env(safe-area-inset-left));
+	padding-right: var(--ion-safe-area-right);
+	padding-left: var(--ion-safe-area-left);
 }
 .py-safe {
-	padding-top: var(--safe-area-inset-top, env(safe-area-inset-top));
-	padding-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
+	padding-top: var(--ion-safe-area-top);
+	padding-bottom: var(--ion-safe-area-bottom);
 }
 .ps-safe {
-	padding-inline-start: var(--safe-area-inset-left, env(safe-area-inset-left));
+	padding-inline-start: var(--ion-safe-area-left);
 }
 .pe-safe {
-	padding-inline-end: var(--safe-area-inset-left, env(safe-area-inset-left));
+	padding-inline-end: var(--ion-safe-area-left);
 }
 .pt-safe {
-	padding-top: var(--safe-area-inset-top, env(safe-area-inset-top));
+	padding-top: var(--ion-safe-area-top);
 }
 .pr-safe {
-	padding-right: var(--safe-area-inset-right, env(safe-area-inset-right));
+	padding-right: var(--ion-safe-area-right);
 }
 .pb-safe {
-	padding-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
+	padding-bottom: var(--ion-safe-area-bottom);
 }
 .pl-safe {
-	padding-left: var(--safe-area-inset-left, env(safe-area-inset-left));
+	padding-left: var(--ion-safe-area-left);
 }
 ```
 
@@ -156,19 +156,19 @@ Screen height, using `-webkit-fill-available` on Safari:
 ```css
 .min-h-screen-safe {
 	min-height: calc(
-		100vh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
+		100vh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom))
 	);
 	min-height: -webkit-fill-available;
 }
 .max-h-screen-safe {
 	max-height: calc(
-		100vh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
+		100vh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom))
 	);
 	max-height: -webkit-fill-available;
 }
 .h-screen-safe {
 	height: calc(
-		100vh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
+		100vh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom))
 	);
 	height: -webkit-fill-available;
 }
@@ -191,17 +191,17 @@ Screen height, using `-webkit-fill-available` on Safari:
 
 .min-h-vh-safe {
 	min-height: calc(
-		100vh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
+		100vh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom))
 	);
 }
 .max-h-vh-safe {
 	max-height: calc(
-		100vh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
+		100vh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom))
 	);
 }
 .h-vh-safe {
 	height: calc(
-		100vh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
+		100vh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom))
 	);
 }
 
@@ -209,17 +209,17 @@ Screen height, using `-webkit-fill-available` on Safari:
 
 .min-h-dvh-safe {
 	min-height: calc(
-		100dvh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
+		100dvh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom))
 	);
 }
 .max-h-dvh-safe {
 	max-height: calc(
-		100dvh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
+		100dvh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom))
 	);
 }
 .h-dvh-safe {
 	height: calc(
-		100dvh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
+		100dvh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom))
 	);
 }
 
@@ -227,17 +227,17 @@ Screen height, using `-webkit-fill-available` on Safari:
 
 .min-h-svh-safe {
 	min-height: calc(
-		100svh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
+		100svh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom))
 	);
 }
 .max-h-svh-safe {
 	max-height: calc(
-		100svh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
+		100svh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom))
 	);
 }
 .h-svh-safe {
 	height: calc(
-		100svh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
+		100svh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom))
 	);
 }
 
@@ -245,17 +245,17 @@ Screen height, using `-webkit-fill-available` on Safari:
 
 .min-h-lvh-safe {
 	min-height: calc(
-		100lvh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
+		100lvh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom))
 	);
 }
 .max-h-lvh-safe {
 	max-height: calc(
-		100lvh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
+		100lvh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom))
 	);
 }
 .h-lvh-safe {
 	height: calc(
-		100lvh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom)))
+		100lvh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom))
 	);
 }
 ```
@@ -264,36 +264,36 @@ Screen height, using `-webkit-fill-available` on Safari:
 
 ```css
 .inset-safe: {
-	top: var(--safe-area-inset-top, env(safe-area-inset-top));
-	right: var(--safe-area-inset-right, env(safe-area-inset-right));
-	bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
-	left: var(--safe-area-inset-left, env(safe-area-inset-left));
+	top: var(--ion-safe-area-top);
+	right: var(--ion-safe-area-right);
+	bottom: var(--ion-safe-area-bottom);
+	left: var(--ion-safe-area-left);
 }
 .inset-x-safe: {
-	right: var(--safe-area-inset-right, env(safe-area-inset-right));
-	left: var(--safe-area-inset-left, env(safe-area-inset-left));
+	right: var(--ion-safe-area-right);
+	left: var(--ion-safe-area-left);
 }
 .inset-y-safe: {
-	top: var(--safe-area-inset-top, env(safe-area-inset-top));
-	bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
+	top: var(--ion-safe-area-top);
+	bottom: var(--ion-safe-area-bottom);
 }
 .start-safe: {
-	inset-inline-start: var(--safe-area-inset-left, env(safe-area-inset-left));
+	inset-inline-start: var(--ion-safe-area-left);
 }
 .end-safe: {
-	inset-inline-end: var(--safe-area-inset-left, env(safe-area-inset-left));
+	inset-inline-end: var(--ion-safe-area-left);
 }
 .top-safe: {
-	top: var(--safe-area-inset-top, env(safe-area-inset-top));
+	top: var(--ion-safe-area-top);
 }
 .right-safe: {
-	right: var(--safe-area-inset-right, env(safe-area-inset-right));
+	right: var(--ion-safe-area-right);
 }
 .bottom-safe: {
-	bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
+	bottom: var(--ion-safe-area-bottom);
 }
 .left-safe: {
-	left: var(--safe-area-inset-left, env(safe-area-inset-left));
+	left: var(--ion-safe-area-left);
 }
 ```
 
@@ -305,10 +305,10 @@ For example, using Tailwind's default spacing scale:
 
 ```css
 .mr-safe-offset-8 {
-	margin-right: calc(var(--safe-area-inset-right, env(safe-area-inset-right)) + 2rem);
+	margin-right: calc(var(--ion-safe-area-right) + 2rem);
 }
 .pb-safe-or-20 {
-	padding-bottom: max(var(--safe-area-inset-right, env(safe-area-inset-right)), 5rem);
+	padding-bottom: max(var(--ion-safe-area-right), 5rem);
 }
 ```
 

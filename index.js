@@ -24,180 +24,180 @@ function generateVariantUtilities(baseUtilities, variant, generateValue) {
 const safeArea = plugin(({ addUtilities, matchUtilities, theme }) => {
 	const baseUtilities = {
 		".m-safe": {
-			marginTop: "var(--safe-area-inset-top, env(safe-area-inset-top))",
-			marginRight: "var(--safe-area-inset-right, env(safe-area-inset-right))",
-			marginBottom: "var(--safe-area-inset-bottom, env(safe-area-inset-bottom))",
-			marginLeft: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			marginTop: "var(--ion-safe-area-top)",
+			marginRight: "var(--ion-safe-area-right)",
+			marginBottom: "var(--ion-safe-area-bottom)",
+			marginLeft: "var(--ion-safe-area-left)",
 		},
 		".mx-safe": {
-			marginRight: "var(--safe-area-inset-right, env(safe-area-inset-right))",
-			marginLeft: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			marginRight: "var(--ion-safe-area-right)",
+			marginLeft: "var(--ion-safe-area-left)",
 		},
 		".my-safe": {
-			marginTop: "var(--safe-area-inset-top, env(safe-area-inset-top))",
-			marginBottom: "var(--safe-area-inset-bottom, env(safe-area-inset-bottom))",
+			marginTop: "var(--ion-safe-area-top)",
+			marginBottom: "var(--ion-safe-area-bottom)",
 		},
 		".ms-safe": {
-			marginInlineStart: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			marginInlineStart: "var(--ion-safe-area-left)",
 		},
 		".me-safe": {
-			marginInlineEnd: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			marginInlineEnd: "var(--ion-safe-area-left)",
 		},
 		".mt-safe": {
-			marginTop: "var(--safe-area-inset-top, env(safe-area-inset-top))",
+			marginTop: "var(--ion-safe-area-top)",
 		},
 		".mr-safe": {
-			marginRight: "var(--safe-area-inset-right, env(safe-area-inset-right))",
+			marginRight: "var(--ion-safe-area-right)",
 		},
 		".mb-safe": {
-			marginBottom: "var(--safe-area-inset-bottom, env(safe-area-inset-bottom))",
+			marginBottom: "var(--ion-safe-area-bottom)",
 		},
 		".ml-safe": {
-			marginLeft: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			marginLeft: "var(--ion-safe-area-left)",
 		},
 		".p-safe": {
-			paddingTop: "var(--safe-area-inset-top, env(safe-area-inset-top))",
-			paddingRight: "var(--safe-area-inset-right, env(safe-area-inset-right))",
-			paddingBottom: "var(--safe-area-inset-bottom, env(safe-area-inset-bottom))",
-			paddingLeft: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			paddingTop: "var(--ion-safe-area-top)",
+			paddingRight: "var(--ion-safe-area-right)",
+			paddingBottom: "var(--ion-safe-area-bottom)",
+			paddingLeft: "var(--ion-safe-area-left)",
 		},
 		".px-safe": {
-			paddingRight: "var(--safe-area-inset-right, env(safe-area-inset-right))",
-			paddingLeft: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			paddingRight: "var(--ion-safe-area-right)",
+			paddingLeft: "var(--ion-safe-area-left)",
 		},
 		".py-safe": {
-			paddingTop: "var(--safe-area-inset-top, env(safe-area-inset-top))",
-			paddingBottom: "var(--safe-area-inset-bottom, env(safe-area-inset-bottom))",
+			paddingTop: "var(--ion-safe-area-top)",
+			paddingBottom: "var(--ion-safe-area-bottom)",
 		},
 		".ps-safe": {
-			paddingInlineStart: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			paddingInlineStart: "var(--ion-safe-area-left)",
 		},
 		".pe-safe": {
-			paddingInlineEnd: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			paddingInlineEnd: "var(--ion-safe-area-left)",
 		},
 		".pt-safe": {
-			paddingTop: "var(--safe-area-inset-top, env(safe-area-inset-top))",
+			paddingTop: "var(--ion-safe-area-top)",
 		},
 		".pr-safe": {
-			paddingRight: "var(--safe-area-inset-right, env(safe-area-inset-right))",
+			paddingRight: "var(--ion-safe-area-right)",
 		},
 		".pb-safe": {
-			paddingBottom: "var(--safe-area-inset-bottom, env(safe-area-inset-bottom))",
+			paddingBottom: "var(--ion-safe-area-bottom)",
 		},
 		".pl-safe": {
-			paddingLeft: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			paddingLeft: "var(--ion-safe-area-left)",
 		},
 		".scroll-m-safe": {
-			scrollMarginTop: "var(--safe-area-inset-top, env(safe-area-inset-top))",
-			scrollMarginRight: "var(--safe-area-inset-right, env(safe-area-inset-right))",
-			scrollMarginBottom: "var(--safe-area-inset-bottom, env(safe-area-inset-bottom))",
-			scrollMarginLeft: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			scrollMarginTop: "var(--ion-safe-area-top)",
+			scrollMarginRight: "var(--ion-safe-area-right)",
+			scrollMarginBottom: "var(--ion-safe-area-bottom)",
+			scrollMarginLeft: "var(--ion-safe-area-left)",
 		},
 		".scroll-mx-safe": {
-			scrollMarginRight: "var(--safe-area-inset-right, env(safe-area-inset-right))",
-			scrollMarginLeft: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			scrollMarginRight: "var(--ion-safe-area-right)",
+			scrollMarginLeft: "var(--ion-safe-area-left)",
 		},
 		".scroll-my-safe": {
-			scrollMarginTop: "var(--safe-area-inset-top, env(safe-area-inset-top))",
-			scrollMarginBottom: "var(--safe-area-inset-bottom, env(safe-area-inset-bottom))",
+			scrollMarginTop: "var(--ion-safe-area-top)",
+			scrollMarginBottom: "var(--ion-safe-area-bottom)",
 		},
 		".scroll-ms-safe": {
-			scrollMarginInlineStart: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			scrollMarginInlineStart: "var(--ion-safe-area-left)",
 		},
 		".scroll-me-safe": {
-			scrollMarginInlineEnd: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			scrollMarginInlineEnd: "var(--ion-safe-area-left)",
 		},
 		".scroll-mt-safe": {
-			scrollMarginTop: "var(--safe-area-inset-top, env(safe-area-inset-top))",
+			scrollMarginTop: "var(--ion-safe-area-top)",
 		},
 		".scroll-mr-safe": {
-			scrollMarginRight: "var(--safe-area-inset-right, env(safe-area-inset-right))",
+			scrollMarginRight: "var(--ion-safe-area-right)",
 		},
 		".scroll-mb-safe": {
-			scrollMarginBottom: "var(--safe-area-inset-bottom, env(safe-area-inset-bottom))",
+			scrollMarginBottom: "var(--ion-safe-area-bottom)",
 		},
 		".scroll-ml-safe": {
-			scrollMarginLeft: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			scrollMarginLeft: "var(--ion-safe-area-left)",
 		},
 		".scroll-p-safe": {
-			scrollPaddingTop: "var(--safe-area-inset-top, env(safe-area-inset-top))",
-			scrollPaddingRight: "var(--safe-area-inset-right, env(safe-area-inset-right))",
-			scrollPaddingBottom: "var(--safe-area-inset-bottom, env(safe-area-inset-bottom))",
-			scrollPaddingLeft: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			scrollPaddingTop: "var(--ion-safe-area-top)",
+			scrollPaddingRight: "var(--ion-safe-area-right)",
+			scrollPaddingBottom: "var(--ion-safe-area-bottom)",
+			scrollPaddingLeft: "var(--ion-safe-area-left)",
 		},
 		".scroll-px-safe": {
-			scrollPaddingRight: "var(--safe-area-inset-right, env(safe-area-inset-right))",
-			scrollPaddingLeft: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			scrollPaddingRight: "var(--ion-safe-area-right)",
+			scrollPaddingLeft: "var(--ion-safe-area-left)",
 		},
 		".scroll-py-safe": {
-			scrollPaddingTop: "var(--safe-area-inset-top, env(safe-area-inset-top))",
-			scrollPaddingBottom: "var(--safe-area-inset-bottom, env(safe-area-inset-bottom))",
+			scrollPaddingTop: "var(--ion-safe-area-top)",
+			scrollPaddingBottom: "var(--ion-safe-area-bottom)",
 		},
 		".scroll-ps-safe": {
-			scrollPaddingInlineStart: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			scrollPaddingInlineStart: "var(--ion-safe-area-left)",
 		},
 		".scroll-pe-safe": {
-			scrollPaddingInlineEnd: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			scrollPaddingInlineEnd: "var(--ion-safe-area-left)",
 		},
 		".scroll-pt-safe": {
-			scrollPaddingTop: "var(--safe-area-inset-top, env(safe-area-inset-top))",
+			scrollPaddingTop: "var(--ion-safe-area-top)",
 		},
 		".scroll-pr-safe": {
-			scrollPaddingRight: "var(--safe-area-inset-right, env(safe-area-inset-right))",
+			scrollPaddingRight: "var(--ion-safe-area-right)",
 		},
 		".scroll-pb-safe": {
-			scrollPaddingBottom: "var(--safe-area-inset-bottom, env(safe-area-inset-bottom))",
+			scrollPaddingBottom: "var(--ion-safe-area-bottom)",
 		},
 		".scroll-pl-safe": {
-			scrollPaddingLeft: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			scrollPaddingLeft: "var(--ion-safe-area-left)",
 		},
 		".inset-safe": {
-			top: "var(--safe-area-inset-top, env(safe-area-inset-top))",
-			right: "var(--safe-area-inset-right, env(safe-area-inset-right))",
-			bottom: "var(--safe-area-inset-bottom, env(safe-area-inset-bottom))",
-			left: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			top: "var(--ion-safe-area-top)",
+			right: "var(--ion-safe-area-right)",
+			bottom: "var(--ion-safe-area-bottom)",
+			left: "var(--ion-safe-area-left)",
 		},
 		".inset-x-safe": {
-			right: "var(--safe-area-inset-right, env(safe-area-inset-right))",
-			left: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			right: "var(--ion-safe-area-right)",
+			left: "var(--ion-safe-area-left)",
 		},
 		".inset-y-safe": {
-			top: "var(--safe-area-inset-top, env(safe-area-inset-top))",
-			bottom: "var(--safe-area-inset-bottom, env(safe-area-inset-bottom))",
+			top: "var(--ion-safe-area-top)",
+			bottom: "var(--ion-safe-area-bottom)",
 		},
 		".start-safe": {
-			insetInlineStart: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			insetInlineStart: "var(--ion-safe-area-left)",
 		},
 		".end-safe": {
-			insetInlineEnd: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			insetInlineEnd: "var(--ion-safe-area-left)",
 		},
 		".top-safe": {
-			top: "var(--safe-area-inset-top, env(safe-area-inset-top))",
+			top: "var(--ion-safe-area-top)",
 		},
 		".right-safe": {
-			right: "var(--safe-area-inset-right, env(safe-area-inset-right))",
+			right: "var(--ion-safe-area-right)",
 		},
 		".bottom-safe": {
-			bottom: "var(--safe-area-inset-bottom, env(safe-area-inset-bottom))",
+			bottom: "var(--ion-safe-area-bottom)",
 		},
 		".left-safe": {
-			left: "var(--safe-area-inset-left, env(safe-area-inset-left))",
+			left: "var(--ion-safe-area-left)",
 		},
 		".min-h-screen-safe": {
 			minHeight: [
-				"calc(100vh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom))))",
+				"calc(100vh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom)))",
 				"-webkit-fill-available",
 			],
 		},
 		".max-h-screen-safe": {
 			maxHeight: [
-				"calc(100vh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom))))",
+				"calc(100vh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom)))",
 				"-webkit-fill-available",
 			],
 		},
 		".h-screen-safe": {
 			height: [
-				"calc(100vh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom))))",
+				"calc(100vh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom)))",
 				"-webkit-fill-available",
 			],
 		},
@@ -212,62 +212,62 @@ const safeArea = plugin(({ addUtilities, matchUtilities, theme }) => {
 		},
 		".min-h-vh-safe": {
 			minHeight: [
-				"calc(100vh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom))))",
+				"calc(100vh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom)))",
 			],
 		},
 		".max-h-vh-safe": {
 			maxHeight: [
-				"calc(100vh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom))))",
+				"calc(100vh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom)))",
 			],
 		},
 		".h-vh-safe": {
 			height: [
-				"calc(100vh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom))))",
+				"calc(100vh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom)))",
 			],
 		},
 		".min-h-dvh-safe": {
 			minHeight: [
-				"calc(100dvh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom))))",
+				"calc(100dvh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom)))",
 			],
 		},
 		".max-h-dvh-safe": {
 			maxHeight: [
-				"calc(100dvh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom))))",
+				"calc(100dvh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom)))",
 			],
 		},
 		".h-dvh-safe": {
 			height: [
-				"calc(100dvh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom))))",
+				"calc(100dvh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom)))",
 			],
 		},
 		".min-h-svh-safe": {
 			minHeight: [
-				"calc(100svh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom))))",
+				"calc(100svh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom)))",
 			],
 		},
 		".max-h-svh-safe": {
 			maxHeight: [
-				"calc(100svh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom))))",
+				"calc(100svh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom)))",
 			],
 		},
 		".h-svh-safe": {
 			height: [
-				"calc(100svh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom))))",
+				"calc(100svh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom)))",
 			],
 		},
 		".min-h-lvh-safe": {
 			minHeight: [
-				"calc(100lvh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom))))",
+				"calc(100lvh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom)))",
 			],
 		},
 		".max-h-lvh-safe": {
 			maxHeight: [
-				"calc(100lvh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom))))",
+				"calc(100lvh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom)))",
 			],
 		},
 		".h-lvh-safe": {
 			height: [
-				"calc(100lvh - (var(--safe-area-inset-top, env(safe-area-inset-top)) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom))))",
+				"calc(100lvh - (var(--ion-safe-area-top) + var(--ion-safe-area-bottom)))",
 			],
 		},
 	};
